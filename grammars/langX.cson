@@ -5,7 +5,7 @@ parser: 'tree-sitter-langx'
 
 fileTypes: ['lx' ]
 scopes:
-  'declar_stmt > id_expr' : 'declar.identifier'
+  'declar_stmt > id_expr' : 'entity.name.function'
 
 
 folds: [
