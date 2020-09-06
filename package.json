@@ -11,5 +11,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Aincvy/langX-atom.git"
+  } ,
+  "dependencies": {
+    "tree-sitter-langx": "^0.0.1"
   }
 }
