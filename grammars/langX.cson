@@ -9,9 +9,8 @@ scopes:
   func_declar_stmt > KEY_FUNCTION,
   class_declar_stmt > KEY_AUTO,
   class_declar_stmt > KEY_EXTEND,
-  '''
-  : 'keyword.operator',
-  'class_declar_stmt > id_expr' : 'entity.name.class',
+  ''': 'keyword.operator'
+  'class_declar_stmt > id_expr' : 'entity.name.class'
 
 
 folds: [
