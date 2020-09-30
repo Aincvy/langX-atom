@@ -5,7 +5,13 @@ parser: 'tree-sitter-langx'
 
 fileTypes: ['lx' ]
 scopes:
-  'declar_stmt > id_expr' : 'entity.name.function'
+  '''
+  func_declar_stmt > KEY_FUNCTION,
+  class_declar_stmt > KEY_AUTO,
+  class_declar_stmt > KEY_EXTEND,
+  '''
+  : 'keyword.operator',
+  'class_declar_stmt > id_expr' : 'entity.name.class',
 
 
 folds: [
