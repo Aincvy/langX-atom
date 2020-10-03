@@ -9,8 +9,17 @@ scopes:
   func_declar_stmt > KEY_FUNCTION,
   class_declar_stmt > KEY_AUTO,
   class_declar_stmt > KEY_EXTEND,
-  ''': 'keyword.operator'
+  selection_stmt > KEY_IF,
+  selection_stmt > KEY_ELSE,
+  selection_stmt > KEY_SWITCH
+  ''': 'keyword.control'
+
   'class_declar_stmt > id_expr' : 'entity.name.class'
+  'func_declar_stmt > func_name_types' : 'entity.name.function'
+
+  '_KEY_NULL' : 'keyword.operator'
+  'KEY_TRUE': 'keyword.operator'
+  'KEY_FALSE': 'keyword.operator'
 
 
 folds: [
