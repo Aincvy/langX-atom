@@ -7,7 +7,7 @@ fileTypes: ['lx' ]
 scopes:
   '''
   func_declar_stmt > KEY_FUNCTION,
-  lambda_stmt > KEY_FUNCTION
+  lambda_stmt > KEY_FUNCTION,
   class_name_prefix > KEY_AUTO,
   class_name_suffix > KEY_EXTEND,
   KEY_IS,
