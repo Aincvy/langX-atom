@@ -112,6 +112,11 @@ folds: [
     start: {index: 0}
     end: {index: -1}
   }
+  {
+    type: 'class_body'
+    start: {index: 0}
+    end: {index: -1}
+  }
 ]
 
 comments:
