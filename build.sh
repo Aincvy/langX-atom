@@ -3,5 +3,5 @@
 git add .
 git commit -m "$1"
 git push
-apm publish minor
+apm publish patch
 echo 'over!' 
