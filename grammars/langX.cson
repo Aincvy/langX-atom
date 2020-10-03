@@ -7,6 +7,7 @@ fileTypes: ['lx' ]
 scopes:
   '''
   func_declar_stmt > KEY_FUNCTION,
+  lambda_stmt > KEY_FUNCTION
   class_name_prefix > KEY_AUTO,
   class_name_suffix > KEY_EXTEND,
   KEY_IS,
@@ -58,17 +59,49 @@ scopes:
 
   'new_expr > id_expr': 'entity.name.class'
   'class_body > var_declar_stmt > id_expr': 'variable.other.object.property'
+  'class_body > single_assign_stmt > id_expr': 'variable.other.object.property'
 
   '''
+  OP_AND,
   OP_OR,
+  OP_NOT,
   OP_GT,
   OP_LT,
   OP_GE,
-  OP_SCOPE
+  OP_LE,
+  OP_EQ,
+  OP_NE,
+  OP_SCOPE,
+  BIT_AND,
+  BIT_OR,
+  BIT_XOR,
+  BIT_NOT,
+  BIT_LEFT_SHIFT,
+  BIT_RIGHT_SHIFT,
+  OP_ADD,
+  OP_SUB,
+  OP_MUL,
+  OP_DIV,
+  OP_MOD,
+  OP_ASSIGN,
+  OP_ADD_EQ,
+  OP_SUB_EQ,
+  OP_MUL_EQ,
+  OP_DIV_EQ,
+  OP_MOD_EQ,
+  OP_INC,
+  OP_DEC,
   ''': 'keyword.operator'
 
   'COMMENT_LINE': 'comment'
   'COMMENT_BLOCK': 'comment.block'
+
+  'namespace_declar_stmt > namespace_name_stmt': 'entity.name.package'
+  'namespace_ref_stmt > namespace_name_stmt': 'entity.name.package'
+
+  '''
+  var_declar_stmt > id_expr,
+  ''': 'support.variable'
 
 folds: [
   {
