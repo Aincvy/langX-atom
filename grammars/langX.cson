@@ -101,7 +101,6 @@ scopes:
 
   '''
   var_declar_stmt > id_expr,
-  assign_stmt > common_assignable_expr > id_expr
   ''': 'support.variable'
 
 folds: [
