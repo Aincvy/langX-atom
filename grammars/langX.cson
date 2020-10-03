@@ -9,11 +9,40 @@ scopes:
   func_declar_stmt > KEY_FUNCTION,
   class_name_prefix > KEY_AUTO,
   class_name_suffix > KEY_EXTEND,
+  KEY_IS,
+  KEY_TRY,
+  KEY_CATCH
+  ''': 'keyword.control'
+
+  '''
   KEY_IF,
   KEY_ELSE,
   KEY_SWITCH,
-  KEY_TRY,
-  KEY_CATCH
+  KEY_CASE,
+  KEY_DEFAULT
+  KEY_WHILE,
+  KEY_FOR,
+  KEY_BREAK,
+  KEY_RETURN,
+  KEY_CONTINUE
+  ''': 'keyword.control'
+
+  '''
+  KEY_LOCAL,
+  KEY_CONST,
+  KEY_RESTRICT,
+  KEY_SET,
+  KEY_PUBLIC,
+  KEY_REQUIRE,
+  KEY_REQUIRE_ONCE,
+  KEY_INCLUDE,
+  KEY_REF
+  ''': 'keyword.control'
+
+  '''
+  KEY_DELETE,
+  KEY_NEW,
+  KEY_THIS
   ''': 'keyword.control'
 
   'null_expr' : 'keyword.operator'
@@ -24,13 +53,21 @@ scopes:
   'string_expr': 'string.source.embedded'
 
   'class_declar_stmt > id_expr' : 'entity.name.class'
+  'static_member_stmt > id_expr:nth-child(0)' : 'entity.name.class'
   'func_declar_stmt > func_name_types' : 'entity.name.function'
+
+  'new_expr > id_expr': 'support.type'
 
 
 
 folds: [
   {
     type: 'comment'
+  }
+  {
+    type: 'code_block'
+    start: {index: 0}
+    end: {index: -1}
   }
 ]
 
