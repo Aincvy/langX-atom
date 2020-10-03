@@ -45,7 +45,7 @@ scopes:
   KEY_THIS
   ''': 'keyword.control'
 
-  'null_expr' : 'keyword.operator'
+  'null_expr' : 'constant.language.null'
   'KEY_TRUE': 'constant.language.boolean'
   'KEY_FALSE': 'constant.language.boolean'
 
@@ -56,9 +56,19 @@ scopes:
   'static_member_stmt > id_expr:nth-child(0)' : 'entity.name.class'
   'func_declar_stmt > func_name_types' : 'entity.name.function'
 
-  'new_expr > id_expr': 'support.storage.type'
+  'new_expr > id_expr': 'entity.name.class'
+  'class_body > var_declar_stmt > id_expr': 'variable.other.object.property'
 
+  '''
+  OP_OR,
+  OP_GT,
+  OP_LT,
+  OP_GE,
+  OP_SCOPE
+  ''': 'keyword.operator'
 
+  'COMMENT_LINE': 'comment'
+  'COMMENT_BLOCK': 'comment.block'
 
 folds: [
   {
