@@ -59,7 +59,7 @@ scopes:
 
   'new_expr > id_expr': 'entity.name.class'
   'class_body > var_declar_stmt > id_expr': 'variable.other.object.property'
-  'class_body > single_assign_stmt > id_expr': 'variable.other.object.property'
+  'class_body > single_assign_stmt > common_assignable_expr > common_others_values_expr > id_expr': 'variable.other.object.property'
 
   '''
   OP_AND,
