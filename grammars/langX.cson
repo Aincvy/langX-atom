@@ -17,9 +17,12 @@ scopes:
   'class_declar_stmt > id_expr' : 'entity.name.class'
   'func_declar_stmt > func_name_types' : 'entity.name.function'
 
-  '_KEY_NULL' : 'keyword.operator'
+  'null_expr' : 'keyword.operator'
   'KEY_TRUE': 'keyword.operator'
   'KEY_FALSE': 'keyword.operator'
+
+  'positive_number_expr' : 'constant.numeric'
+  'string_expr': 'string.source.embedded'
 
 
 folds: [
