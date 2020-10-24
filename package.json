@@ -13,6 +13,6 @@
     "url": "https://github.com/Aincvy/langX-atom.git"
   },
   "dependencies": {
-    "tree-sitter-langx": "^0.1.0"
+    "tree-sitter-langx": "^0.1.1"
   }
 }
