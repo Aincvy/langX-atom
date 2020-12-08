@@ -33,11 +33,11 @@ scopes:
   KEY_CONST,
   KEY_RESTRICT,
   KEY_SET,
+  KEY_REF,
   KEY_PUBLIC,
   KEY_REQUIRE,
   KEY_REQUIRE_ONCE,
-  KEY_INCLUDE,
-  KEY_REF
+  KEY_INCLUDE
   ''': 'keyword.control'
 
   '''
@@ -100,7 +100,9 @@ scopes:
   'namespace_ref_stmt > namespace_name_stmt': 'entity.name.package'
 
   '''
-  var_declar_stmt > id_expr,
+  elements_var_declar_stmt > id_expr,
+  var_declar_stmt > single_assign_stmt > common_assignable_expr > common_others_values_expr > id_expr,
+
   ''': 'support.variable'
 
 folds: [
